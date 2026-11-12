@@ -1,5 +1,5 @@
 'use strict';
-const CACHE='shanlijian-book-offline-v1';
+const CACHE='shanlijian-book-offline-v2';
 const ROOT=new URL('./',self.location.href);
 const FILES=['./','./index.html','./manifest.webmanifest','./icon-180.png','./icon-192.png','./icon-512.png'].map(p=>new URL(p,ROOT).href);
 self.addEventListener('install',event=>event.waitUntil((async()=>{const cache=await caches.open(CACHE);await cache.addAll(FILES);await self.skipWaiting();})()));
